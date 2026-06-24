@@ -1,40 +1,184 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Урок в Фокусе</title>
-  <link rel="stylesheet" href="assets/css/main.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок в Фокусе — Новая Эра Оценки Уроков</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&amp;family=Jost:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-  <header class="header">
-    <h1>Урок в Фокусе</h1>
-    <p>Новая эра оценки уроков</p>
-  </header>
+    <header>
+        <div class="logo">Урок<span>В</span>Фокусе</div>
+        <nav>
+            <a href="#features">Возможности</a>
+            <a href="#how">Как работает</a>
+            <a href="#stats">Статистика</a>
+            <a href="#about">О нас</a>
+            <a href="#faq">FAQ</a>
+        </nav>
+        <a href="#contact" class="cta-button">Начать оценивать <i class="fas fa-arrow-right"></i></a>
+        <div class="hamburger">☰</div>
+    </header>
 
-  <main>
-    <section class="intro">
-      <h2>О проекте</h2>
-      <p>Платформа для объективной и понятной оценки качества уроков.</p>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Новая эра <span>оценки уроков</span></h1>
+            <p>Объективная система оценивания занятий с помощью ИИ. Помогаем студентам выбирать лучших преподавателей, а педагогам — расти.</p>
+            <div class="hero-actions">
+                <a href="#contact" class="cta-button">Оценить урок</a>
+                <a href="#how" class="cta-button" style="background: transparent; border: 2px solid white; color: white;">Узнать больше</a>
+            </div>
+        </div>
+
+        <div class="rating-card">
+            <h3 style="margin-bottom: 1.5rem; text-align: center;">Оцените последний урок</h3>
+            <div style="margin-bottom: 1.5rem; font-size: 0.95rem; line-height: 1.5;">
+                <strong>Предмет:</strong> Проектный менеджмент в разработке ПО<br>
+                <strong>Преподаватель:</strong> Емельянов А.М.<br>
+                <strong>Дата:</strong> 13 февраля 2026
+            </div>
+            <div class="rating-label" style="text-align:center; margin: 1rem 0; font-weight: 500;">Оцените занятие</div>
+            <div class="stars" id="stars">
+                <span class="star" data-rating="1">★</span>
+                <span class="star" data-rating="2">★</span>
+                <span class="star" data-rating="3">★</span>
+                <span class="star" data-rating="4">★</span>
+                <span class="star" data-rating="5">★</span>
+            </div>
+            <button onclick="submitRating()" class="cta-button" style="width: 100%; margin-top: 1rem;">Отправить оценку</button>
+        </div>
     </section>
 
-    <section class="cards">
-      <div class="card">
-        <h3>Структура урока</h3>
-        <p>Четкие цели, логика и этапы занятия.</p>
-      </div>
-      <div class="card">
-        <h3>Вовлеченность</h3>
-        <p>Активность учеников и интерактив.</p>
-      </div>
+    <section class="features" id="features">
+        <div class="section-header">
+            <h2>Почему мы?</h2>
+            <p>Уникальные возможности нашей платформы</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🤖</div>
+                <h3>ИИ-анализ</h3>
+                <p>Мощный искусственный интеллект анализирует отзывы, выявляет тренды и дает объективную оценку.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Быстрая модерация</h3>
+                <p>Отзывы проверяются за 24 часа благодаря автоматизации.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Детальная аналитика</h3>
+                <p>Статистика по каждому занятию: материал, методика, вовлеченность.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3>Оценка конкретных уроков</h3>
+                <p>Динамика качества преподавания в реальном времени.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>Безопасность</h3>
+                <p>Защита от фейковых отзывов и верификация студентов.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>Адаптивный дизайн</h3>
+                <p>Отличная работа на всех устройствах.</p>
+            </div>
+        </div>
     </section>
-  </main>
 
-  <footer>
-    <p>© 2026 Урок в Фокусе</p>
-  </footer>
+    <section class="how-it-works" id="how">
+        <div class="section-header">
+            <h2>Как это работает</h2>
+            <p>Простой процесс оценки</p>
+        </div>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Регистрация</h3>
+                <p>Подтвердите статус студента</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Найдите урок</h3>
+                <p>Выберите занятие</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Оставьте отзыв</h3>
+                <p>Поставьте оценку и напишите комментарий</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>Аналитика</h3>
+                <p>ИИ обработает данные</p>
+            </div>
+        </div>
+    </section>
 
-  <script src="assets/js/main.js"></script>
+    <section class="stats" id="stats">
+        <div class="stat-item">
+            <h3>5000+</h3>
+            <p>Оцененных уроков</p>
+        </div>
+        <div class="stat-item">
+            <h3>2500+</h3>
+            <p>Студентов</p>
+        </div>
+        <div class="stat-item">
+            <h3>300+</h3>
+            <p>Преподавателей</p>
+        </div>
+        <div class="stat-item">
+            <h3>95%</h3>
+            <p>Довольных пользователей</p>
+        </div>
+    </section>
+
+    <section class="cta-section" id="contact">
+        <h2 style="font-size: 3rem;">Готовы улучшать образование?</h2>
+        <p style="font-size: 1.4rem; max-width: 700px; margin: 1.5rem auto;">Присоединяйтесь к тысячам студентов, которые уже меняют систему образования к лучшему</p>
+        <a href="#" onclick="alert('Регистрация открыта! (демо)')" class="cta-button" style="background: white; color: var(--primary); font-size: 1.2rem; padding: 1.2rem 3rem;">Создать аккаунт бесплатно</a>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3 style="margin-bottom: 1rem;">УрокВФокусе</h3>
+                <p>Платформа нового поколения для объективной оценки качества преподавания с использованием ИИ.</p>
+            </div>
+            <div>
+                <h4>Платформа</h4>
+                <ul style="list-style: none; margin-top: 1rem;">
+                    <li><a href="#features" style="color: #ccc; text-decoration: none;">Возможности</a></li>
+                    <li><a href="#how" style="color: #ccc; text-decoration: none;">Как работает</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Проект</h4>
+                <ul style="list-style: none; margin-top: 1rem;">
+                    <li><a href="#" style="color: #ccc; text-decoration: none;">О нас</a></li>
+                    <li><a href="#" style="color: #ccc; text-decoration: none;">Команда</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Поддержка</h4>
+                <ul style="list-style: none; margin-top: 1rem;">
+                    <li><a href="#" style="color: #ccc; text-decoration: none;">Контакты</a></li>
+                    <li><a href="#" style="color: #ccc; text-decoration: none;">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); color: #888;">
+            © 2026 Урок в Фокусе. Проект Павла Новодольнова (1ИП1225). Все права защищены.
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
